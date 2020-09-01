@@ -1,0 +1,103 @@
+.header {
+  height: 90vh;
+  background: #eee;
+  position: relative;
+  overflow: hidden;
+
+&__text-box {
+  // position: absolute;
+  // top: 0%;
+  // left: 50%;
+  // transform: translate(-50, -50%);
+  text-align: center;
+  width: 100%;
+  }
+}
+
+.box{
+  display: block;
+  height: 30vh;
+  width: auto;
+
+  &-upper {
+    position: absolute;
+    top: 32%;
+    left: 0;
+    width: 100%;
+  }
+  
+  &-lower{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--left-up{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(to top left, 
+    rgba($color-tertiary-dark, .4), rgba($color-tertiary, .4)),
+    url(../img/heading-left-2.jpg);
+    background-size: 100%;
+    background-position: 50% 65%;
+    clip-path: polygon(0 0, 90% 0, 82% 100%, 0 100%);
+    animation: fromTopLeft .8s .3s ease-out backwards;
+  }
+  
+  &--right-up{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    background: yellow;
+    background: linear-gradient(to top left, 
+    rgba($color-tertiary-dark, .4), rgba($color-tertiary, .4)),
+    url(../img/heading-right.jpg);
+    background-size: 100%;
+    background-position: 50% 80%;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 2% 100%);
+    animation:  fromTopRight .8s .6s ease-out backwards;
+
+  }
+  
+  &--left-down{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(to top right, 
+    rgba($color-primary-dark, .4), rgba($color-primary, .4)), 
+    url(../img/heading-left.jpg);
+    background-size: 100%;
+    background-position: 50% 65%;
+    clip-path: polygon(0 0, 82% 0, 90% 100%, 0 100%);
+    animation:  fromBottomLeft .8s .9s ease-out backwards;
+
+  }
+  
+  &--right-down{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(to top left, 
+    rgba($color-tertiary-dark, .4), rgba($color-secondary, .4)),
+      url(../img/heading-right-3.jpg);
+    background-size: 100%;
+    background-position: 50% 55%;
+    clip-path: polygon(2% 0, 100% 0, 100% 100%, 10% 100%);
+    animation: fromBottomRight .8s 1.2s ease-out backwards;
+  }
+}
+

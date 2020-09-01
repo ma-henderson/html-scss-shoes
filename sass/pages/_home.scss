@@ -1,0 +1,28 @@
+.section-about {
+  height: 90rem;
+  background: #eee;
+  padding: 10rem 0;
+  position: relative;
+}
+
+.section-products{
+  margin-top: -7rem;
+  height: 70rem;
+  padding: 15rem 0;
+  background: linear-gradient(
+    90deg, 
+    rgba($color-primary, .3), 
+    rgba($color-secondary, .6),
+    rgba($color-tertiary, .3)),
+    url(../img/tradition.jpg);
+  background-size: 100%;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+
+
+}
+
+.section-locations{
+  height: 70rem;
+  padding: 10rem 0;
+
+}
