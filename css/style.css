@@ -550,7 +550,7 @@ body {
       background-position: 50% 0%; }
     .info-card__back-2 {
       background: url(../img/london.jpg);
-      background-size: 100%;
+      background-size: 120%;
       background-position: 50% 0%; }
     .info-card__back-3 {
       background: url(../img/dubai.jpg);
@@ -601,6 +601,39 @@ body {
       transform: translate(-50%, -50%);
       font-size: 3rem; }
 
+.footer {
+  height: 20rem;
+  padding: 3rem;
+  background: linear-gradient(90deg, #29719b, #e44250, #eb7132); }
+  .footer__logo-box {
+    text-align: center; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__navigation {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .footer__list {
+    list-style: none;
+    display: inline-block;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 6rem; }
+  .footer__item {
+    display: inline-block;
+    padding: 0 1rem; }
+  .footer__copyright {
+    border-top: 1px solid #eee;
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    margin-top: 6rem; }
+  .footer__link:link, .footer__link:active {
+    color: #53d9d1;
+    text-decoration: none; }
+
 .section-about {
   height: 90rem;
   background: #eee;
@@ -616,5 +649,5 @@ body {
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); }
 
 .section-locations {
-  height: 70rem;
-  padding: 10rem 0; }
+  padding: 10rem 0;
+  background: #eee; }
