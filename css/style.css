@@ -101,7 +101,7 @@ body {
 .heading-secondary {
   color: #222;
   margin: 0 auto;
-  font-size: 3.5rem;
+  font-size: 6rem;
   font-weight: 700;
   text-align: center; }
   .heading-secondary__main {
@@ -624,20 +624,22 @@ body {
   .footer__item {
     display: inline-block;
     padding: 0 1rem; }
+    .footer__item:hover {
+      transform: skewx(-6deg) scale(1.05); }
   .footer__copyright {
     border-top: 1px solid #eee;
     color: #fff;
     font-size: 1.2rem;
     padding-top: 1rem;
     margin-top: 6rem; }
-  .footer__link:link, .footer__link:active {
-    color: #53d9d1;
-    text-decoration: none; }
+  .footer__link:link, .footer__link:active, .footer__link:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s ease; }
 
 .section-about {
-  height: 90rem;
   background: #eee;
-  padding: 10rem 0;
+  padding: 15rem 0;
   position: relative; }
 
 .section-products {
