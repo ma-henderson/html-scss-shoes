@@ -95,6 +95,9 @@ body {
   box-sizing: border-box;
   padding: 2rem;
   font-family: 'Fahkwang', sans-serif; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .heading-primary {
   color: #222;
@@ -374,6 +377,7 @@ body {
     position: relative;
     display: inline-block;
     width: 100%;
+    -webikit-backface-visibility: hidden;
     backface-visibility: hidden;
     height: 100%;
     transition: all 1.2s ease;
@@ -513,6 +517,7 @@ body {
     top: 0;
     left: 0;
     border-radius: 5px;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all 0.8s ease;
     overflow: hidden;
@@ -688,6 +693,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all 0.8 ease; }
   .info-card__back {

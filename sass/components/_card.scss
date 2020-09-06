@@ -9,6 +9,7 @@
     top: 0;
     left: 0;
     border-radius: 5px;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all 0.8s ease;
     overflow:hidden;
