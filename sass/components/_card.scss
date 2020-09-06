@@ -208,9 +208,13 @@
       height: auto;
       box-shadow: none;
 
+      &--front {
+        margin-bottom: -4.5rem;
+      }
+
       &--back {
-        transform: rotateY(0deg) translateY(-5rem);
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        transform: rotateY(0deg);
+        clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
 
         &-1 {
           background: $color-white;
@@ -242,6 +246,7 @@
       text-align: center;
       margin-top: 4rem;
 
+
       &--only {
         display: block;
         font-size: 1.8rem;
@@ -262,7 +267,7 @@
     &__btn {
       margin: 0 auto;
       margin-bottom: 2rem;
-      
+
     }
 
 

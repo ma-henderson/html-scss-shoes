@@ -449,6 +449,23 @@ body {
   .flipper__checkbox:checked ~ .flipper__side--back > .flipper__btn--left {
     opacity: 1;
     visibility: visible; }
+  @media only screen and (max-width: 56.25em) {
+    .flipper__side--front {
+      transform: rotateY(0deg); }
+    .flipper__side--back {
+      transform: rotatey(0) rotateX(180deg); }
+    .flipper__checkbox:checked ~ .flipper__side--front {
+      transform-origin: top center;
+      transform: rotateX(-180deg); }
+    .flipper__checkbox:checked ~ .flipper__side--back {
+      transform-origin: left;
+      transform: rotateX(0) translate(0, calc(-100% - 6rem)); }
+    .flipper__checkbox:checked ~ .flipper__side--front > .flipper__btn--right {
+      opacity: 0;
+      visibility: hidden; }
+    .flipper__checkbox:checked ~ .flipper__side--back > .flipper__btn--left {
+      opacity: 1;
+      visibility: visible; } }
   .flipper__btn {
     position: absolute;
     top: 50%;
@@ -619,9 +636,11 @@ body {
         position: relative;
         height: auto;
         box-shadow: none; }
+        .card__side--front {
+          margin-bottom: -4.5rem; }
         .card__side--back {
-          transform: rotateY(0deg) translateY(-5rem);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+          transform: rotateY(0deg);
+          clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%); }
           .card__side--back-1 {
             background: #fff; }
           .card__side--back-2 {

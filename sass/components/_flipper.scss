@@ -137,6 +137,39 @@
     }
   }
   
+  @include respond(tab-port) {
+
+    &__side--front {
+      transform: rotateY(0deg);
+    }
+    &__side--back {
+      transform: rotatey(0) rotateX(180deg);
+    }
+
+    &__checkbox:checked ~ &__side--front {
+      transform-origin: top center;
+      transform: rotateX(-180deg);
+    }
+    
+    &__checkbox:checked ~ &__side--back {
+      transform-origin: left;
+      transform: rotateX(0) translate(0, calc(-100% - #{$gutter-horizontal}));
+    }
+    
+    &__checkbox:checked ~ &__side--front > &__btn {
+      &--right {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  
+    &__checkbox:checked ~ &__side--back > &__btn {
+      &--left {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }  
   
 
   &__btn {
