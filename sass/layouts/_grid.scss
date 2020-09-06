@@ -8,12 +8,28 @@
   
   @include clearfix;
   
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 2rem;
+  }
+
   [class^="col-"] {
     float: left;
 
+    @include respond(tab-port) {
+      margin-right: 0 !important;
+    }
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
   

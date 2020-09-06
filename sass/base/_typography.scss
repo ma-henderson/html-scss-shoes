@@ -1,12 +1,26 @@
 .heading-primary{
-  color: #222;
+  color: $color-font-main;
   width: 100%;
   font-weight: 600;
   padding: 0.5rem 0;
   text-align: center;
 
+  @include respond(tab-land) {
+  }
+
+  @include respond(tab-port) {
+    margin-top: 1rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 1.2rem;
+    line-height: 9rem;
+    padding: 0.5rem 4rem;
+  }
+
+
   &--main{
-    font-size: 5rem;
+    font-size: 6rem;
     display: block;
     letter-spacing: 1px;
   }
@@ -15,46 +29,56 @@
     display: block;
     font-size: 3.5rem;
     font-weight: 500;
+    
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &--sub {
-    font-size: 4rem;
+    font-size: 5.5rem;
     letter-spacing: 4px;
+    
+    @include respond(phone) {
+      display: none;
+    }
   }
 }
 
 .heading-secondary {
-  color: #222;
+  color: $color-font-main;
+  padding: 0 1rem;
   margin: 0 auto;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   text-align: center;
 
   &__main {
     display: block;
-    font-size: 5rem;
+    font-size: 3.5rem;
     margin-bottom: .3rem;
   }
 
   &__sub {
     display: block;
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 500;
     margin-bottom: 2rem;
   }
 }
 
 .heading-tertiary {
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-align: center;
   transform: skewX(-6deg);
+  margin-bottom: 1.5rem;
 }
 
 .paragraph {
   font-size: $font-default-size;
-  color: #666;
+  color: $color-font-secondary;
   font-weight: 400;
-  line-height: 2.2rem;
+  line-height: 2.6rem;
   
   &:not(:last-child) {
     margin-bottom: 3rem;
