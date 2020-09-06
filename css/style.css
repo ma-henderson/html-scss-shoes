@@ -332,7 +332,7 @@ body {
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   padding: 2rem 3rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #222;
   text-decoration: none;
@@ -488,7 +488,6 @@ body {
 
 .card {
   display: block;
-  height: 45rem;
   position: relative; }
   .card__side {
     position: absolute;
@@ -611,6 +610,54 @@ body {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  @media only screen and (max-width: 56.25em) {
+    .card {
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__side {
+        position: relative;
+        height: auto;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0deg) translateY(-5rem);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+          .card__side--back-1 {
+            background: #fff; }
+          .card__side--back-2 {
+            background: #fff; }
+          .card__side--back-3 {
+            background: #fff; }
+      .card__list {
+        padding: 3rem 6rem; }
+        .card__list li {
+          padding: 1.5rem 0 !important; }
+      .card__features {
+        margin-bottom: 2rem; }
+      .card__cta {
+        display: block;
+        color: #222;
+        text-align: center;
+        margin-top: 4rem; }
+        .card__cta--only {
+          display: block;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+          font-weight: 400; }
+        .card__cta--price {
+          display: block;
+          font-size: 6rem;
+          text-transform: uppercase;
+          margin-bottom: 2rem;
+          font-weight: 200; }
+      .card__btn {
+        margin: 0 auto;
+        margin-bottom: 2rem; }
+      .card:hover .card__side--front {
+        transform: rotateY(0deg); }
+      .card:hover .card__side--back {
+        transform: rotateY(0); } }
 
 .info-card {
   display: block;
