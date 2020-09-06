@@ -1,9 +1,10 @@
 .footer {
-  height: 20rem;
   padding: 3rem;
   background: linear-gradient(90deg, 
     $color-primary-dark, $color-secondary-dark, $color-tertiary);
   
+
+
   &__logo-box {
     text-align: center;
   }
@@ -15,9 +16,13 @@
 
   &__navigation {
     color: $color-white;
-    font-size: $font-default-size;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
+    
+    @include respond (tab-port) {
+      text-align: center;
+    }
   }
 
   &__list {
@@ -26,14 +31,32 @@
     border-top: 1px solid #eee;
     padding-top: 1rem;
     margin-top: 6rem;
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &__item {
     display: inline-block;
     padding: 0 1rem;
 
+    &:not(:last-child) {
+      @include respond(tab-port) {
+        margin-right: 12%;
+      }
+    }
+
     &:hover {
       transform: skewx(-6deg) scale(1.05);
+    }
+  }
+
+  &__link {
+    &:link, &:active, &:visited {
+      color: $color-white;
+      text-decoration: none;
+      transition: all 0.2s ease;
     }
   }
 
@@ -44,6 +67,17 @@
     letter-spacing: 1px;
     padding-top: 1rem;
     margin-top: 6rem;
+
+    a {
+      &:link, &:active, &:visited {
+        text-decoration: underline;
+      }
+    }    
+
+    @include respond(tab-port) {
+      margin-top: 2rem;
+      font-size: 1.8rem
+    }
   }
 
   &__link {
@@ -52,5 +86,9 @@
       text-decoration: none;
       transition: all 0.2s ease;
     }
+  }
+
+  @include respond (tab-port) {
+    
   }
 }

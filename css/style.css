@@ -149,7 +149,9 @@ body {
     margin-bottom: 2rem; }
 
 .heading-tertiary {
-  font-size: 2.4rem;
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
   text-align: center;
   transform: skewX(-6deg);
   margin-bottom: 1.5rem; }
@@ -296,7 +298,6 @@ body {
     animation: fromBottomRight .8s 1.2s ease-out backwards; }
 
 .footer {
-  height: 20rem;
   padding: 3rem;
   background: linear-gradient(90deg, #29719b, #e44250, #eb7132); }
   .footer__logo-box {
@@ -306,20 +307,33 @@ body {
     height: auto; }
   .footer__navigation {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__navigation {
+        text-align: center; } }
   .footer__list {
     list-style: none;
     display: inline-block;
     border-top: 1px solid #eee;
     padding-top: 1rem;
     margin-top: 6rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__list {
+        display: block; } }
   .footer__item {
     display: inline-block;
     padding: 0 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__item:not(:last-child) {
+        margin-right: 12%; } }
     .footer__item:hover {
       transform: skewx(-6deg) scale(1.05); }
+  .footer__link:link, .footer__link:active, .footer__link:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s ease; }
   .footer__copyright {
     border-top: 1px solid #eee;
     color: #fff;
@@ -327,6 +341,12 @@ body {
     letter-spacing: 1px;
     padding-top: 1rem;
     margin-top: 6rem; }
+    .footer__copyright a:link, .footer__copyright a:active, .footer__copyright a:visited {
+      text-decoration: underline; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__copyright {
+        margin-top: 2rem;
+        font-size: 1.8rem; } }
   .footer__link:link, .footer__link:active, .footer__link:visited {
     color: #fff;
     text-decoration: none;
@@ -457,13 +477,13 @@ body {
     .flipper__side--front {
       transform: rotateY(0deg); }
     .flipper__side--back {
-      transform: rotatey(0) rotateX(180deg); }
+      transform: rotateY(0) rotateX(180deg); }
     .flipper__checkbox:checked ~ .flipper__side--front {
       transform-origin: top center;
-      transform: rotateX(-180deg); }
+      transform: rotateY(0) rotateX(-180deg); }
     .flipper__checkbox:checked ~ .flipper__side--back {
       transform-origin: left;
-      transform: rotateX(0) translate(0, calc(-100% - 6rem)); }
+      transform: rotateY(0) rotateX(0) translate(0, calc(-100% - 6rem)); }
     .flipper__checkbox:checked ~ .flipper__side--front > .flipper__btn--right {
       opacity: 0;
       visibility: hidden; }
@@ -508,6 +528,7 @@ body {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .card {
+  height: 48rem;
   display: block;
   position: relative; }
   .card__side {
@@ -774,5 +795,5 @@ body {
 
 .section-locations {
   padding: 15rem 0;
-  margin-top: -7rem;
+  margin-top: -10rem;
   background: #eee; }
