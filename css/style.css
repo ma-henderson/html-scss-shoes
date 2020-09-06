@@ -254,11 +254,15 @@ body {
     display: inline-block;
     width: 55%;
     height: 100%;
-    background: linear-gradient(to top left, rgba(196, 129, 41, 0.4), rgba(235, 113, 50, 0.4)), url(../img/heading-left-2.jpg);
-    background-size: 100%;
+    background: linear-gradient(to top left, rgba(196, 129, 41, 0.4), rgba(235, 113, 50, 0.4)), url(../img/heading-left-2-small.jpg);
+    background-size: 140%;
     background-position: 50% 65%;
     clip-path: polygon(0 0, 90% 0, 82% 100%, 0 100%);
     animation: fromTopLeft .8s .3s ease-out backwards; }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 75em) {
+      .box--left-up {
+        background: linear-gradient(to top left, rgba(196, 129, 41, 0.4), rgba(235, 113, 50, 0.4)), url(../img/heading-left-2.jpg);
+        background-size: 100%; } }
   .box--right-up {
     position: absolute;
     right: 0;
@@ -266,12 +270,15 @@ body {
     display: inline-block;
     width: 55%;
     height: 100%;
-    background: yellow;
-    background: linear-gradient(to top left, rgba(196, 129, 41, 0.4), rgba(235, 113, 50, 0.4)), url(../img/heading-right.jpg);
-    background-size: 100%;
+    background: linear-gradient(to top left, rgba(196, 129, 41, 0.4), rgba(235, 113, 50, 0.4)), url(../img/heading-right-small.jpg);
+    background-size: 140%;
     background-position: 50% 80%;
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 2% 100%);
     animation: fromTopRight .8s .6s ease-out backwards; }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 75em) {
+      .box--right-up {
+        background: linear-gradient(to top left, rgba(196, 129, 41, 0.4), rgba(235, 113, 50, 0.4)), url(../img/heading-right.jpg);
+        background-size: 100%; } }
   .box--left-down {
     position: absolute;
     left: 0;
@@ -279,11 +286,15 @@ body {
     display: inline-block;
     width: 55%;
     height: 100%;
-    background: linear-gradient(to top right, rgba(41, 113, 155, 0.4), rgba(83, 217, 209, 0.4)), url(../img/heading-left.jpg);
-    background-size: 100%;
+    background: linear-gradient(to top right, rgba(41, 113, 155, 0.4), rgba(83, 217, 209, 0.4)), url(../img/heading-left-small.jpg);
+    background-size: 140%;
     background-position: 50% 65%;
     clip-path: polygon(0 0, 82% 0, 90% 100%, 0 100%);
     animation: fromBottomLeft .8s .9s ease-out backwards; }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 75em) {
+      .box--left-down {
+        background: linear-gradient(to top right, rgba(41, 113, 155, 0.4), rgba(83, 217, 209, 0.4)), url(../img/heading-left-small.jpg);
+        background-size: 100%; } }
   .box--right-down {
     position: absolute;
     right: 0;
@@ -293,7 +304,7 @@ body {
     height: 100%;
     background: linear-gradient(to top left, rgba(196, 129, 41, 0.4), rgba(242, 123, 155, 0.4)), url(../img/heading-right-2.jpg);
     background-size: 100%;
-    background-position: 50% 55%;
+    background-position: 50% 45%;
     clip-path: polygon(2% 0, 100% 0, 100% 100%, 10% 100%);
     animation: fromBottomRight .8s 1.2s ease-out backwards; }
 
@@ -397,8 +408,8 @@ body {
     position: relative;
     display: inline-block;
     width: 100%;
-    -webikit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     height: 100%;
     transition: all 1.2s ease;
     background: radial-gradient(#53d9d1 10%, #f27b9b 30%, #eb7132 60%);
@@ -415,7 +426,11 @@ body {
     .flipper__side--front {
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      height: 100%; }
+      @media only screen and (max-width: 56.25em) {
+        .flipper__side--front {
+          height: 115%; } }
       .flipper__side--front-left {
         position: absolute;
         bottom: 0;
@@ -439,7 +454,11 @@ body {
       position: absolute;
       top: 0;
       left: 0;
+      height: 100%;
       transform: rotateY(180deg); }
+      @media only screen and (max-width: 56.25em) {
+        .flipper__side--back {
+          height: 115%; } }
       .flipper__side--back-left {
         position: absolute;
         bottom: 0;
@@ -448,7 +467,7 @@ body {
         height: 100%;
         background: url(../img/production-2.jpg);
         clip-path: polygon(4% 0, 100% 0, 100% 100%);
-        background-size: 100%;
+        background-size: 110%;
         background-position: -50% 80%; }
       .flipper__side--back-right {
         position: absolute;
@@ -458,7 +477,7 @@ body {
         height: 100%;
         background: url(../img/production-1.jpg);
         clip-path: polygon(0% 0%, 96% 100%, 0% 100%);
-        background-size: 100%; }
+        background-size: 110%; }
   .flipper__checkbox {
     display: none; }
   .flipper__checkbox:checked ~ .flipper__side--front {
@@ -474,8 +493,6 @@ body {
     opacity: 1;
     visibility: visible; }
   @media only screen and (max-width: 56.25em) {
-    .flipper__side--front {
-      transform: rotateY(0deg); }
     .flipper__side--back {
       transform: rotateY(0) rotateX(180deg); }
     .flipper__checkbox:checked ~ .flipper__side--front {
@@ -483,7 +500,7 @@ body {
       transform: rotateY(0) rotateX(-180deg); }
     .flipper__checkbox:checked ~ .flipper__side--back {
       transform-origin: left;
-      transform: rotateY(0) rotateX(0) translate(0, calc(-100% - 6rem)); }
+      transform: rotateY(0) rotateX(0) translate(0, -130%); }
     .flipper__checkbox:checked ~ .flipper__side--front > .flipper__btn--right {
       opacity: 0;
       visibility: hidden; }
@@ -791,7 +808,7 @@ body {
     .section-products {
       background: linear-gradient(to bottom, rgba(83, 217, 209, 0.3), rgba(242, 123, 155, 0.6), rgba(235, 113, 50, 0.3)), url(../img/store-phone.jpg);
       background-size: 200%;
-      clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 96%); } }
+      clip-path: polygon(0 0, 100% 2.5%, 100% 100%, 0% 97.5%); } }
 
 .section-locations {
   padding: 15rem 0;
