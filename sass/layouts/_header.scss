@@ -80,6 +80,8 @@
       rgba($color-tertiary-dark, .4), rgba($color-tertiary, .4)),
       url(../img/heading-right.jpg);
     background-size: 100%;
+    background-position: 50% 70%;
+
     }
   }
   
@@ -104,7 +106,8 @@
       background: linear-gradient(to top right, 
         rgba($color-primary-dark, .4), rgba($color-primary, .4)), 
         url(../img/heading-left-small.jpg);
-      background-size: 100%;
+        background-size: 100%;
+        background-position: 50% 65%;
     }
   }
   

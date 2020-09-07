@@ -1,0 +1,74 @@
+.form {
+  font-size: inherit;
+  font-family: inherit;
+  
+  &__group {
+    display: block;
+    
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__input {
+    font-size: $font-default-size;
+    font-family: inherit;
+    padding: .5rem 1rem;
+    width: 90%;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 3px;
+    animation: all 0.2s ease;
+
+    &:focus {
+      border-bottom: 3px solid $color-primary;
+      &:invalid {
+        border-bottom: 3px solid red;
+      }
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+  &__input:placeholder-shown {
+    border-bottom: 3px solid transparent !important;
+  }
+  
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, -4rem);
+  }
+
+  &__label {
+    display: block;
+    text-indent: 1rem;
+    font-size: $font-default-size;
+    color: $color-font-secondary;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+    transition: all 0.3s ease;
+  }
+
+  &__p {
+    font-size: $font-default-size;
+    color: $color-font-main;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  &__check {
+    font-size: 1.4rem;
+    &--input {
+      margin-left: 1.5rem;
+      margin-right: 1rem;
+      transform: translateY(2px);
+    }
+    &--label {
+      font-weight: 300;
+    }
+
+  }
+  
+}

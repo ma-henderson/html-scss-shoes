@@ -1,0 +1,63 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: rgba($color-black, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+
+  &__content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background: #eee;
+    padding: 3rem 5rem;
+    border-radius: 3px;
+    color: $color-font-main;
+    background: linear-gradient(115deg, rgba($color-white,.6) 49.9%, transparent 50%),
+      linear-gradient(15deg, $color-primary, $color-secondary, $color-tertiary);
+    transition: all 0.3s linear;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 4rem;
+      right: 4rem;
+      display: inline-block;
+      font-size: 2.5rem;
+      text-align: center;
+      line-height: 1.1;
+      height: 3.2rem;
+      width: 3.2rem;
+      text-decoration: none;
+      color: $color-font-main;
+      background: rgba($color-white, .8);
+      border-radius: 50%;
+      box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+      transition: all 0.2s ease;
+
+      &:hover{
+        color: red;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
